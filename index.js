@@ -1,12 +1,15 @@
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 
-const minSpawnTime = 120
-const spawnRandomness = 40
+canvas.width = document.body.clientWidth
+canvas.height = document.documentElement.clientHeight
+
+const minSpawnTime = canvas.height / 3.3
+const spawnRandomness = canvas.height / 13.5
 
 const lines = [new Line(canvas.width / 2, canvas.height, (3 / 2) * Math.PI)]
 
-ctx.lineWidth = 5
+ctx.lineWidth = canvas.height / 108
 ctx.fillStyle = 'black'
 ctx.strokeStyle = 'white'
 
